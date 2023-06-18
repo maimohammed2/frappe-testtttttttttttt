@@ -121,6 +121,8 @@ def get_safe_globals():
 		log=frappe.log,
 		_dict=frappe._dict,
 		args=form_dict,
+		test = NamespaceDict(call=call_whitelisted_function),
+		# --------------------------------------------------------------
 		frappe=NamespaceDict(
 			call=call_whitelisted_function,
 			flags=frappe._dict(),
